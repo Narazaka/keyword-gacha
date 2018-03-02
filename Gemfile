@@ -15,6 +15,7 @@ gem "uglifier", ">= 1.3.0"
 
 group :test do
   gem "factory_bot_rails", group: "development"
+  gem "faker", group: "development"
   gem "rspec-rails", group: "development"
 end
 
