@@ -18,6 +18,11 @@ Bundler.require(*Rails.groups)
 
 module KeywordGacha
   class Application < Rails::Application
+    Global.configure do |config|
+      config.environment = Rails.env.to_s
+      config.config_directory = Rails.root.join("config", "global").to_s
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
