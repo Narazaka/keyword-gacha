@@ -12,4 +12,12 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "projects", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
+    t.string "sid", limit: 32, null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sid"], name: "index_projects_on_sid"
+  end
+
 end
