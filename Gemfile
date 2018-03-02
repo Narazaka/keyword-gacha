@@ -10,9 +10,9 @@ gem "rails", "~> 5.1.5"
 
 gem "dotenv-rails"
 gem "global"
-gem "dotenv-rails"
 gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "sass-rails", "~> 5.0"
+gem "shibaraku"
 gem "uglifier", ">= 1.3.0"
 
 group :test do
