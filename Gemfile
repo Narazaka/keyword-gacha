@@ -28,6 +28,7 @@ group :development do
   gem "pry-stack_explorer"
   gem "spring"
   gem "spring-commands-rspec"
+  gem "spring-commands-rubocop"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
 end
