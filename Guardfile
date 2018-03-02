@@ -24,7 +24,7 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec" do
+guard :rspec, cmd: "bin/rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
@@ -69,7 +69,8 @@ guard :rspec, cmd: "bundle exec rspec" do
   end
 end
 
-guard :rubocop do
+guard :rubocop, cmd: "bin/rubocop" do
   watch(/.+\.rb$/)
+  watch(/.+\.rake$/)
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
 end
