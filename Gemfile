@@ -25,6 +25,9 @@ group :development do
   gem "annotate"
   gem "bullet", group: :test
   gem "fuubar"
+  gem "guard"
+  gem "guard-rspec"
+  gem "guard-rubocop"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "onkcop", require: false, group: :test
   gem "pry",        group: :test
