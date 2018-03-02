@@ -69,7 +69,7 @@ guard :rspec, cmd: "bin/rspec" do
   end
 end
 
-guard :rubocop, cmd: "bin/rubocop" do
+guard :rubocop, cmd: "bin/rubocop -a" do
   watch(/.+\.rb$/)
   watch(/.+\.rake$/)
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
