@@ -18,14 +18,14 @@ group :test do
   gem "rspec-rails", group: "development"
 end
 
-group :development, :test do
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-end
-
 group :development do
   gem "fuubar"
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "onkcop", require: false, group: :test
+  gem "pry",        group: :test
+  gem "pry-byebug", group: :test
+  gem "pry-rails",  group: :test
+  gem "pry-stack_explorer"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
