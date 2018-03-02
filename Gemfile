@@ -13,6 +13,10 @@ gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 
+group :test do
+  gem "rspec-rails", group: "development"
+end
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "onkcop"
