@@ -13,12 +13,13 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "phases", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
+    t.bigint "project_id", null: false, unsigned: true
     t.string "name"
     t.datetime "start_at"
     t.datetime "end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["end_at", "start_at"], name: "index_phases_on_end_at_and_start_at"
+    t.index ["project_id", "end_at", "start_at"], name: "index_phases_on_project_id_and_end_at_and_start_at"
   end
 
   create_table "projects", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin" do |t|
